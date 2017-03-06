@@ -1,4 +1,4 @@
-# Simple knitr Markdown example 	# Note: 1 
+# Simple knitr Markdown example
 
 Two examples:
 
@@ -6,13 +6,28 @@ Two examples:
 * calculating
 
 Plot example:
-```{r plotexample, fig.width=2, fig.height=2, fig.align='center'} 	# Note: 2 
-library(ggplot2) 	# Note: 3 
+
+```r
+library(ggplot2) 
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.2.5
+```
+
+```r
 ggplot(data=data.frame(x=c(1:100),y=sin(0.1*c(1:100)))) +
    geom_line(aes(x=x,y=y))
-``` 	# Note: 4 
+```
 
-Calculation example: 	# Note: 5 
-```{r calcexample} 	# Note: 6 
+<img src="figure/plotexample-1.png" title="plot of chunk plotexample" alt="plot of chunk plotexample" style="display: block; margin: auto;" />
+
+Calculation example: 
+
+```r
 pi*pi
+```
+
+```
+## [1] 9.869604
 ```
